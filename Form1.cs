@@ -85,8 +85,8 @@ namespace Zad5_SymulatorMikroprocesora
 
         private void AktualizujRejestry()      // aktualizacja rejestrow
         {
-            lblAX.Text = $"AX = {rejestry["AX"]} ({(rejestry["AX"] >> 8)}H:{(rejestry["AX"] & 0xFF)}L)";
-            lblBX.Text = $"BX = {rejestry["BX"]} ({(rejestry["BX"] >> 8)}H:{(rejestry["BX"] & 0xFF)}L)";
+            lblAX.Text = $"AX = {rejestry["AX"]} ({(rejestry["AX"] >> 8)}H:{(rejestry["AX"] & 0xFF)}L)"; // >> 8 przesuwa bity o 8 miejsc w prawo co zostawia nam tylko starszy bajt
+            lblBX.Text = $"BX = {rejestry["BX"]} ({(rejestry["BX"] >> 8)}H:{(rejestry["BX"] & 0xFF)}L)"; // & 0xFF wypisuje mlodszy bajt, poprzez maskowanie 8 najmlodszych bitow
             lblCX.Text = $"CX = {rejestry["CX"]} ({(rejestry["CX"] >> 8)}H:{(rejestry["CX"] & 0xFF)}L)";
             lblDX.Text = $"DX = {rejestry["DX"]} ({(rejestry["DX"] >> 8)}H:{(rejestry["DX"] & 0xFF)}L)";
         }
